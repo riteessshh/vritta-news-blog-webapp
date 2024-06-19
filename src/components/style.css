@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Lustria&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.navbar {
+  color: #0d1b2a;
+  font-family: "Lusitana", serif;
+}
+
+h1 {
+  font-family: "Lusitana", serif;
+}
+
+.hero hr {
+  border: 2px solid #415a77;
+  width: 100vw;
+  position: relative;
+  left: -15px;
+}
