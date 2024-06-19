@@ -18,7 +18,7 @@ function Navbar() {
         <div className="menu-button cursor-pointer md:hidden">
           <img src={img} alt="MenuButton" onClick={toggleActiveClass} />
         </div>
-        <div className="navbar w-1/3 justify-between hidden md:flex">
+        <div className=" w-1/3 md:w-96 md:text-lg justify-between hidden md:flex">
           <p className="items">tech</p>
           <p className="items">home</p>
           <p className="items">world</p>
