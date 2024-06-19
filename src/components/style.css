@@ -1,21 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Lustria&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 .navbar {
-  color: #0d1b2a;
+  color: #153448;
   font-family: "Lusitana", serif;
-  margin: 10px 15px 0 15px;
+  margin: 5px 15px 0 15px;
+}
+.items {
+  cursor: pointer;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Lusitana", serif;
-  color: #0d1b2a;
+  color: #153448;
+}
+p {
+  font-family: "Raleway", serif;
+  font-weight: 400;
+  color: #3c5b6f;
 }
 
 hr {
-  border: 2px solid #415a77;
-  width: 100vw;
+  border: 3px solid #415a77;
+  width: 100%;
   position: relative;
   /* left: -15px; */
+}
+
+.main-hero {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px;
+  align-items: center;
 }
 
 .cards {
@@ -36,4 +56,63 @@ hr {
 .heroImage {
   width: 90vw;
   height: auto;
+}
+.feedBox {
+  display: flex;
+}
+.arts {
+  margin: 10px 0;
+  padding: 1px 1px 1px 4px;
+  border: 2px solid #415a77;
+}
+
+.genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+.gen {
+  width: 45%;
+  color: #415a77;
+  margin: 5px;
+  height: 12vh;
+  align-content: center;
+  border: solid 2px #415a77;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #153448;
+}
+.footer {
+  display: flex;
+}
+.logo {
+  width: 30%;
+  font-family: "Lustria", serif;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.tabs {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.tab {
+  margin: 10px 0;
+  padding: 0 10px;
+  color: antiquewhite;
+  font-family: "Raleway", serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cred {
+  padding: 10px 0;
+  color: antiquewhite;
+  font-family: "Raleway", serif;
+  cursor: default;
 }

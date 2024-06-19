@@ -12,7 +12,7 @@ function Navbar() {
   };
 
   return (
-    <div className="navbar">
+    <div className="navbar lg:ml-10 lg:mr-10">
       <div className="flex justify-between items-baseline">
         <div className="logo text-3xl md:text-5xl font-medium">vritta</div>
         <div className="menu-button cursor-pointer md:hidden">
