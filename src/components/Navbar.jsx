@@ -19,9 +19,9 @@ function Navbar() {
           <img src={img} alt="MenuButton" onClick={toggleActiveClass} />
         </div>
         <div className=" w-1/3 md:w-96 md:text-lg justify-between hidden md:flex">
-          <p className="items">tech</p>
           <p className="items">home</p>
-          <p className="items">world</p>
+          <p className="items">tech</p>
+          <p className="items">health</p>
           <p className="items">technology</p>
           <p className="items">sports</p>
         </div>

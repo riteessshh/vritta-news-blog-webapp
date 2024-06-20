@@ -41,22 +41,20 @@ hr {
 .cards {
   display: flex;
   flex-direction: row;
-  overflow: auto;
+  /* overflow: auto; */
   margin: 10px 15px 0 15px;
 }
+.card-image {
+  height: 300px;
+  width: 100%;
+}
 .showcase {
-  width: 90vw;
-  display: block;
   margin-right: 10px;
-  height: auto;
 }
 .showcase:last-child {
   margin-right: 0;
 }
-.heroImage {
-  width: 90vw;
-  height: auto;
-}
+
 .feedBox {
   display: flex;
 }
