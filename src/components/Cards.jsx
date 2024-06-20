@@ -5,7 +5,7 @@ import img from "../assets/heroImg.png";
 function Cards() {
   const [news, setNews] = useState([]);
 
-  const url = "http://localhost:3000/articles/10";
+  const url = "https://vritta-news-blog-server.onrender.com/articles/10";
 
   async function getNews() {
     const response = await axios.get(url);

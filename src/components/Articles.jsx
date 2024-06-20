@@ -17,7 +17,7 @@ function Articles() {
 
   const category = ["business", "health", "sports", "entertainment", "general"];
 
-  const url = `http://localhost:3000/category/${category[randomInt]}`;
+  const url = `https://vritta-news-blog-server.onrender.com/category/${category[randomInt]}`;
 
   async function getNews() {
     setIsLoading(true); // Set loading state to true

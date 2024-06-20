@@ -14,7 +14,7 @@ function WhatsNew() {
 
   const randomInt = getRandomInt(1, 19); // Get a random integer between 5 (inclusive) and 10 (inclusive)
 
-  const url = `http://localhost:3000/articles/20`;
+  const url = `https://vritta-news-blog-server.onrender.com/articles/20`;
 
   async function getNews() {
     const response = await axios.get(url);
