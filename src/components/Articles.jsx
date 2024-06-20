@@ -18,6 +18,7 @@ function Articles() {
   const category = ["business", "health", "sports", "entertainment", "general"];
 
   const url = `https://vritta-news-blog-server.onrender.com/category/${category[randomInt]}`;
+  // const url = `http://localhost:3000/category/business`;
 
   async function getNews() {
     setIsLoading(true); // Set loading state to true
@@ -39,16 +40,19 @@ function Articles() {
 
   return (
     <div className="mt-5 lg:mt-1 mb-5">
-      <div className="articles m-3">
+      <div className="articles m-5">
         <h3 className="text-3xl lg:text-4xl font-bold">Latest Articles</h3>
         {isLoading && <p>Loading articles...</p>}
         {error && <p className="error">{error}</p>}
-        <div className="list-arts flex-col">
+        <div className="list-arts rounded-md shadow-md flex-col">
           {news.map((item) => (
-            <div key={item._id} className="arts justify-between flex">
-              <p className="lg:w-[520px]">{item.title}</p>
+            <div
+              key={item._id}
+              className="arts justify-between rounded-md shadow-md  flex"
+            >
+              <p className="lg:w-[520px] self-center">{item.title}</p>
               <img
-                className="h-28 w-32"
+                className="h-28 w-32 rounded-md"
                 src={item.urlToImage || artImg} // Fallback image
                 alt="articleImage"
               />

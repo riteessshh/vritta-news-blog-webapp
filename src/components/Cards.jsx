@@ -6,6 +6,7 @@ function Cards() {
   const [news, setNews] = useState([]);
 
   const url = "https://vritta-news-blog-server.onrender.com/articles/10";
+  // const url = "http://localhost:3000/articles/10";
 
   async function getNews() {
     const response = await axios.get(url);
@@ -20,13 +21,13 @@ function Cards() {
 
   return (
     <div className="m-2 lg:m-9">
-      <h1 className="text-2xl ml-4 md:text-4xl">Latest News</h1>
-      <div className="cards overflow-hidden hover:overflow-x-scroll">
+      <h1 className="text-3xl ml-4 md:text-4xl">Latest News</h1>
+      <div className="cards overflow-auto hover:overflow-x-scroll">
         {news.map((item) => (
-          <div key={item._id} className="showcase relative">
-            <div className="heroImage w-[90vw] md:w-[60vw] lg:w-[40vw] brightness-50">
+          <div key={item._id} className="showcase mb-4 relative">
+            <div className="heroImage shadow-md rounded-sm w-[84vw] md:w-[60vw] lg:w-[30vw] brightness-50">
               <img
-                className="card-image"
+                className="card-image rounded-sm"
                 src={item.urlToImage || img}
                 alt={item.title}
               />
