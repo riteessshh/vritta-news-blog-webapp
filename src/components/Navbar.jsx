@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import img from "../assets/menuButton.svg";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -14,7 +15,9 @@ function Navbar() {
   return (
     <div className="navbar lg:ml-10 lg:mr-10">
       <div className="flex justify-between items-baseline">
-        <div className="logo text-3xl md:text-5xl font-medium">vritta</div>
+        <div className="logo text-3xl md:text-5xl font-medium">
+          <Link to={"/"}>vritta</Link>
+        </div>
         <div className="menu-button cursor-pointer md:hidden">
           <img src={img} alt="MenuButton" onClick={toggleActiveClass} />
         </div>

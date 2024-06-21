@@ -16,6 +16,7 @@ h4,
 h5 {
   font-family: "Lusitana", serif;
   color: #153448;
+  cursor: default;
 }
 p {
   font-family: "Raleway", serif;
@@ -46,9 +47,7 @@ hr {
   height: 300px;
   width: 100%;
 }
-.showcase {
-  margin-right: 15px;
-}
+
 .showcase:last-child {
   margin-right: 0;
 }
@@ -58,7 +57,7 @@ hr {
 }
 .arts {
   margin: 20px 0;
-  padding: 1px 1px 1px 4px;
+  padding: 2px 1px 2px 5px;
   border: 2px solid #415a77;
 }
 

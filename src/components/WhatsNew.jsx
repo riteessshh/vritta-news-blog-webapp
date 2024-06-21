@@ -5,7 +5,7 @@ import BreakingN from "./BreakingN";
 import Articles from "./Articles";
 
 function WhatsNew() {
-  const [articles, setArticles] = useState([]);
+  const [article, setArticle] = useState([]);
   function getRandomInt(min, max) {
     min = Math.ceil(min); // Ensure minimum is an integer
     max = Math.floor(max); // Ensure maximum is an integer
@@ -14,12 +14,12 @@ function WhatsNew() {
 
   const randomInt = getRandomInt(1, 19); // Get a random integer between 5 (inclusive) and 10 (inclusive)
 
-  const url = `https://vritta-news-blog-server.onrender.com/articles/20`;
-  // const url = "http://localhost:3000/articles/20";
+  const url = `https://vritta-news-blog-server.onrender.com/list/20`;
+  // const url = "http://localhost:3000/list/20";
 
   async function getNews() {
     const response = await axios.get(url);
-    setArticles(response.data[randomInt]);
+    setArticle(response.data[randomInt]);
   }
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function WhatsNew() {
         <hr />
       </div>
       <div className="feedBox flex-col lg:flex-row lg:mr-10 lg:ml-10">
-        <BreakingN articles={articles} />
+        <BreakingN article={article} />
         <hr className="lg:hidden" />
         <Articles />
       </div>

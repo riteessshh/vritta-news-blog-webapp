@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import artImg from "../assets/articleImage.png"; // Assuming you have this fallback image
+import { Link } from "react-router-dom";
 
 function Articles() {
   const [news, setNews] = useState([]);
@@ -44,19 +45,21 @@ function Articles() {
         <h3 className="text-3xl lg:text-4xl font-bold">Latest Articles</h3>
         {isLoading && <p>Loading articles...</p>}
         {error && <p className="error">{error}</p>}
-        <div className="list-arts rounded-md shadow-md flex-col">
+        <div className="list-arts rounded-md flex-col">
           {news.map((item) => (
-            <div
-              key={item._id}
-              className="arts justify-between rounded-md shadow-md  flex"
-            >
-              <p className="lg:w-[520px] self-center">{item.title}</p>
-              <img
-                className="h-28 w-32 rounded-md"
-                src={item.urlToImage || artImg} // Fallback image
-                alt="articleImage"
-              />
-            </div>
+            <Link reloadDocument to={`/article/${item._id}`} key={item._id}>
+              <div className="arts lg:p-2 justify-between rounded-md shadow-md flex">
+                <div className="lg:w-[520px] self-center">
+                  <p className="font-medium pb-1">{item.title || "Title"}</p>
+                  <p className="text-sm">By {item.author}</p>
+                </div>
+                <img
+                  className="h-29 w-32 rounded-md"
+                  src={item.urlToImage || artImg} // Fallback image
+                  alt="articleImage"
+                />
+              </div>
+            </Link>
           ))}
         </div>
       </div>

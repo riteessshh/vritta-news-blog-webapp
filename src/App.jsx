@@ -1,20 +1,17 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/home";
 import "./App.css";
-import Hero from "./components/Hero";
-import WhatsNew from "./components/WhatsNew";
-import Genre from "./components/Genre";
-import Footer from "./components/Footer";
+import Page from "./components/Page";
 
 function App() {
   return (
-    <div className="rootBox">
-      <Navbar />
-      <Hero />
-      <WhatsNew />
-      <Genre />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/article/:articleId" element={<Page />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
