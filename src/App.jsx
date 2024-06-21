@@ -9,7 +9,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/article/:articleId" element={<Page />} />
+        <Route
+          path="/article/:articleId"
+          element={<Page />}
+          key={Math.round(Math.random() * 10)}
+        />
       </Routes>
     </BrowserRouter>
   );

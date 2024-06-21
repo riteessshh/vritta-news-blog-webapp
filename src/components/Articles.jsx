@@ -47,7 +47,7 @@ function Articles() {
         {error && <p className="error">{error}</p>}
         <div className="list-arts rounded-md flex-col">
           {news.map((item) => (
-            <Link reloadDocument to={`/article/${item._id}`} key={item._id}>
+            <Link to={`/article/${item._id}`} key={item._id}>
               <div className="arts lg:p-2 justify-between rounded-md shadow-md flex">
                 <div className="lg:w-[520px] self-center">
                   <p className="font-medium pb-1">{item.title || "Title"}</p>

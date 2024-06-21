@@ -6,7 +6,7 @@ function BreakingN({ article }) {
   const loadingText = "Loading.....";
   return (
     <div className="ml-5 mr-5">
-      <Link reloadDocument to={`/article/${article._id}`}>
+      <Link to={`/article/${article._id}`}>
         <div className="container rounded-md shadow-md overflow-hidden mb-5 lg:mr-3 mt-5">
           <img className="" src={article.urlToImage || wnImage} alt="" />
           <div className="ml-2 mr-2">
