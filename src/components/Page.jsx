@@ -62,7 +62,7 @@ function Page() {
           <h1 className="text-2xl lg:text-4xl font-semibold">
             {article.title}
           </h1>
-          <h4>By {article.author}</h4>
+          <h4>By {article.author || "Loading"}</h4>
           <GetDateTime dateTimeString={article.publishedAt} />
         </div>
         <div className="subtitle w-[80%] pb-3 text-center  font-light">

@@ -7,7 +7,7 @@ import Page from "./components/Page";
 function App() {
   return (
     <div>
-      <BrowserRouter basename="/vritta-news-blog-webapp">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/article/:articleId" element={<Page />} />
