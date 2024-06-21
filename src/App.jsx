@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter basename="/vritta-news-blog-webapp">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/article/:articleId" element={<Page />} />
