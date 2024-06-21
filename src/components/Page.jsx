@@ -6,6 +6,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import WhatsNew from "./WhatsNew";
 import Footer from "./Footer";
+import GetDateTime from "./getDateTime";
 
 function Page() {
   const [article, setArticle] = useState([]);
@@ -62,6 +63,7 @@ function Page() {
             {article.title}
           </h1>
           <h4>By {article.author}</h4>
+          <GetDateTime dateTimeString={article.publishedAt} />
         </div>
         <div className="subtitle w-[80%] pb-3 text-center  font-light">
           <p>"{article.description}"</p>
