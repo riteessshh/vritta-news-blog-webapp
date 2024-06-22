@@ -22,11 +22,21 @@ function Navbar() {
           <img src={img} alt="MenuButton" onClick={toggleActiveClass} />
         </div>
         <div className=" w-1/3 md:w-96 md:text-lg justify-between hidden md:flex">
-          <p className="items">home</p>
-          <p className="items">tech</p>
-          <p className="items">health</p>
-          <p className="items">technology</p>
-          <p className="items">sports</p>
+          <Link to={`/`}>
+            <p className="items">home</p>
+          </Link>
+          <Link reloadDocument to={`/category/technology`}>
+            <p className="items">tech</p>
+          </Link>
+          <Link reloadDocument to={`/category/health`}>
+            <p className="items">health</p>
+          </Link>
+          <Link reloadDocument to={`/category/sports`}>
+            <p className="items">sports</p>
+          </Link>
+          <Link reloadDocument to={`/category/business`}>
+            <p className="items">business</p>
+          </Link>
         </div>
       </div>
       <div
@@ -36,11 +46,25 @@ function Navbar() {
         <div className="flex-auto text-3xl p-4 m-2">
           <div className="close">
             <p onClick={toggleActiveClass}>X</p>
-            <p className="items">home</p>
-            <p className="items">tech</p>
-            <p className="items">world</p>
-            <p className="items">technology</p>
-            <p className="items">sports</p>
+            <Link to={`/`}>
+              <p className="items">home</p>
+            </Link>
+            <hr />
+            <Link reloadDocument to={`/category/technology`}>
+              <p className="items">tech</p>
+            </Link>
+            <hr />
+            <Link reloadDocument to={`/category/health`}>
+              <p className="items">health</p>
+            </Link>
+            <hr />
+            <Link reloadDocument to={`/category/sports`}>
+              <p className="items">sports</p>
+            </Link>
+            <hr />
+            <Link reloadDocument to={`/category/business`}>
+              <p className="items">business</p>
+            </Link>
           </div>
         </div>
       </div>

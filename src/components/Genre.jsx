@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Genre() {
   return (
@@ -11,14 +12,42 @@ function Genre() {
           <hr />
         </div>
         <div className="genre-list mt-10 mb-10 mr-2 ml-2 lg:ml-10 lg:mr-10">
-          <div className="gen rounded-md shadow-sm lg:w-[30%]">General</div>
-          <div className="gen rounded-md shadow-sm lg:w-[30%]">Technology</div>
-          <div className="gen rounded-md shadow-sm lg:w-[30%]">Sports</div>
-          <div className="gen rounded-md shadow-sm lg:w-[30%]">Business</div>
-          <div className="gen rounded-md shadow-sm lg:w-[30%]">
-            Entertainment
-          </div>
-          <div className="gen rounded-md shadow-sm lg:w-[30%]">Health</div>
+          <Link
+            className="gen rounded-md shadow-sm lg:w-[30%]"
+            to={`/category/general`}
+          >
+            <div className="">General</div>
+          </Link>
+          <Link
+            className="gen rounded-md shadow-sm lg:w-[30%]"
+            to={`/category/technology`}
+          >
+            <div className="">Technology</div>
+          </Link>
+          <Link
+            className="gen rounded-md shadow-sm lg:w-[30%]"
+            to={`/category/sports`}
+          >
+            <div className="">Sports</div>
+          </Link>
+          <Link
+            className="gen rounded-md shadow-sm lg:w-[30%]"
+            to={`/category/business`}
+          >
+            <div className="">Business</div>
+          </Link>
+          <Link
+            className="gen rounded-md shadow-sm lg:w-[30%]"
+            to={`/category/entertainment`}
+          >
+            <div className="">Entertainment</div>
+          </Link>
+          <Link
+            className="gen rounded-md shadow-sm lg:w-[30%]"
+            to={`/category/health`}
+          >
+            <div className="">Health</div>
+          </Link>
         </div>
       </div>
       <hr />

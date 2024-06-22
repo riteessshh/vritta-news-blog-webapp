@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Lustria&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 .navbar {
   color: #153448;
-  font-family: "Lusitana", serif;
+  font-family: "Merriweather", serif;
   margin: 5px 15px 0 15px;
 }
 .items {
@@ -14,12 +14,12 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Lusitana", serif;
+  font-family: "Merriweather", serif;
   color: #153448;
   cursor: default;
 }
 p {
-  font-family: "Raleway", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #3c5b6f;
 }
@@ -28,7 +28,6 @@ hr {
   border: 3px solid #415a77;
   width: 100%;
   position: relative;
-  /* left: -15px; */
 }
 
 .main-hero {
@@ -40,7 +39,6 @@ hr {
 .cards {
   display: flex;
   flex-direction: row;
-  /* overflow: auto; */
   margin: 10px 15px 0 15px;
 }
 .card-image {
@@ -69,14 +67,18 @@ hr {
 }
 .gen {
   width: 47%;
-  color: #415a77;
+  background-color: #153448;
+  color: white;
   margin: 5px;
   height: 12vh;
   align-content: center;
-  border: solid 2px #415a77;
+  /* border: solid 2px #415a77; */
   cursor: pointer;
   font-size: 28px;
   font-weight: 500;
+}
+.gen:hover {
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
 }
 
 footer {

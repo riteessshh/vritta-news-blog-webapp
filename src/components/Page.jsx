@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import img from "../assets/desktopHero.png";
 import "./page.css";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import WhatsNew from "./WhatsNew";
 import Footer from "./Footer";
 import GetDateTime from "./getDateTime";
@@ -55,7 +55,7 @@ function Page() {
         <h1 className="text-6xl mr-2 lg:mr-10 pb-3 md:text-8xl">ARTICLE</h1>
         <hr />
       </div>
-      <div className="main-card rounded-md shadow-md mx-auto flex-col w-[95%] md:w-[93%]">
+      <div className="main-card rounded-md relative shadow-md mx-auto flex-col w-[95%] md:w-[93%] mb-10">
         {isLoading && <p>Loading articles...</p>}
         {error && <p className="error">{error}</p>}
         <div className="title w-[95%] text-center md:text-left mb-3">
@@ -75,14 +75,20 @@ function Page() {
             alt={article.title}
           />
         </div>
-        <div className="content w-[95%]">
+        <div className="content mb-2 w-[95%]">
           <p>{formatData(article.content || "No content is available.")}...</p>
           <a className="hover:text-blue-300" href={article.url}>
-            Read more from here!
+            Read full article from here!
           </a>
         </div>
+        <div className="self-end m-4">
+          <Link to={"/"}>
+            <p className=" bg-[#153448] hover:shadow-lg w-28 text-white text-center pt-3 pb-3 rounded-md">
+              Go Back
+            </p>
+          </Link>
+        </div>
       </div>
-      <WhatsNew />
       <Footer />
     </div>
   );

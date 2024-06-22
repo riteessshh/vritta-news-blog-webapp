@@ -13,3 +13,11 @@
   color: #3c5b6f;
   font-size: 20px;
 }
+
+.art-list {
+  display: flex;
+}
+
+.showcase {
+  display: flex;
+}

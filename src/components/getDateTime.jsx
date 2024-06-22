@@ -19,8 +19,9 @@ function GetDateTime({ dateTimeString }) {
 
   return (
     <div>
-      <p>Date: {formattedDate}</p>
-      <p>Time: {formattedTime}</p>
+      <p>
+        Dated on: {formattedDate} {formattedTime}
+      </p>
     </div>
   );
 }
