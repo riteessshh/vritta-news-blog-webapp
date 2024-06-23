@@ -2,6 +2,8 @@
 
 This is a React application for a news blog, built using the MERN stack (MongoDB, Express, React, Node.js) and utilizes the News API to fetch and display news articles.
 
+## This is Frontend Part whereas the Backend is on other repository (https://github.com/riteessshh/vritta-news-blog-server)
+
 ### Features
 
 - Displays a list of latest news articles with title, description, source, and published date.
