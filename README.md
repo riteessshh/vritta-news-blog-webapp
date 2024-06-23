@@ -31,7 +31,7 @@ This is a React application for a news blog, built using the MERN stack (MongoDB
 1. Clone this repository:
 
    ```bash
-   git clone https://your-github-repo-url.git
+   git clone https://github.com/riteessshh/vritta-news-blog-webapp.git
    ```
 
 2. Install dependencies:
