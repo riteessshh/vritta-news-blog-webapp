@@ -37,7 +37,7 @@ This is a React application for a news blog, built using the MERN stack (MongoDB
 2. Install dependencies:
 
    ```bash
-   cd news-blog-app
+   cd vritta-news-blog-webapp
    npm install
    ```
 
