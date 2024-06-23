@@ -1,4 +1,4 @@
-## Vritta News Blog App - React & MERN Stack
+## Vritta News Blog App - React & MERN Stack (Frontend)
 
 This is a React application for a news blog, built using the MERN stack (MongoDB, Express, React, Node.js) and utilizes the News API to fetch and display news articles.
 
