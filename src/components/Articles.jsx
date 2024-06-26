@@ -54,7 +54,7 @@ function Articles() {
                   <p className="text-sm">By {item.author}</p>
                 </div>
                 <img
-                  className="h-29 max-h-fit w-32 rounded-md"
+                  className="h-29 w-32 rounded-md"
                   src={item.urlToImage || artImg} // Fallback image
                   alt="articleImage"
                 />

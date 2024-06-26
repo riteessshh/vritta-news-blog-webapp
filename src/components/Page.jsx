@@ -59,7 +59,7 @@ function Page() {
           <h1 className="text-2xl lg:text-4xl font-semibold">
             {article.title || "loading Article.... (please wait)"}
           </h1>
-          <h4>
+          <h4 className="mt-1">
             {article.author
               ? "by " + article.author
               : "author name here if there is any."}

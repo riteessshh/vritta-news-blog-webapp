@@ -10,9 +10,9 @@ function BreakingN({ article }) {
         Trending News
       </h1>
       <Link to={`/article/${article._id}`}>
-        <div className="container rounded-md max-w-[640px] shadow-md hover:shadow-lg overflow-hidden mb-5 lg:mr-3 mt-3">
+        <div className="container rounded-md lg:max-w-[640px] lg:min-w-80 shadow-md hover:shadow-lg overflow-hidden mb-5 lg:mr-3 mt-3">
           <img
-            className="w-full h-[360px]"
+            className="h-[360px] w-full"
             src={article.urlToImage || wnImage}
             alt=""
           />

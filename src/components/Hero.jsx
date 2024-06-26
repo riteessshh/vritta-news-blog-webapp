@@ -15,7 +15,7 @@ function Hero() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  const randomInt = getRandomInt(1, 19); // Get a random integer between 5 (inclusive) and 10 (inclusive)
+  const randomInt = getRandomInt(1, 39); // Get a random integer between 5 (inclusive) and 10 (inclusive)
 
   const url = `https://vritta-news-blog-server.onrender.com/category/general`;
   // const url = "http://localhost:3000/list/20";
@@ -54,7 +54,9 @@ function Hero() {
           </div>
           <div className="content pl-2 pb-2 pr-2 lg:pl-5 lg:w-[100%]">
             <h1 className="text-2xl lg:text-3xl font-medium mt-4">
-              {articles.title}
+              {articles.title
+                ? articles.title
+                : "Please wait while we are getting the articles for you....!"}
             </h1>
             <p className="text-xl lg:text-sm mt-2 mb-2">
               {articles.description}
