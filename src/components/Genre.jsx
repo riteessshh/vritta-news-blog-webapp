@@ -38,9 +38,9 @@ function Genre() {
           </Link>
           <Link
             className="gen rounded-md shadow-sm lg:w-[30%]"
-            to={`/category/entertainment`}
+            to={`/category/politics`}
           >
-            <div className="">Entertainment</div>
+            <div className="">Politics</div>
           </Link>
           <Link
             className="gen rounded-md shadow-sm lg:w-[30%]"

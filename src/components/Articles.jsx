@@ -16,7 +16,7 @@ function Articles() {
 
   const randomInt = getRandomInt(1, 5);
 
-  const category = ["business", "health", "sports", "entertainment", "general"];
+  const category = ["business", "health", "sports", "politics", "general"];
 
   const url = `https://vritta-news-blog-server.onrender.com/category/${category[randomInt]}`;
   // const url = `http://localhost:3000/category/technology`;
