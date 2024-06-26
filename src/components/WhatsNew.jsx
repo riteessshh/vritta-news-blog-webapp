@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import BreakingN from "./BreakingN";
-// import Feeds from "./Feeds";
 import Articles from "./Articles";
 
 function WhatsNew() {
   const [article, setArticle] = useState([]);
+
   function getRandomInt(min, max) {
     min = Math.ceil(min); // Ensure minimum is an integer
     max = Math.floor(max); // Ensure maximum is an integer
@@ -18,23 +18,28 @@ function WhatsNew() {
   // const url = "http://localhost:3000/list/20";
 
   async function getNews() {
-    const response = await axios.get(url);
-    setArticle(response.data[randomInt]);
+    try {
+      const response = await axios.get(url);
+      setArticle(response.data[randomInt]);
+    } catch (error) {
+      console.error("Error fetching news:", error);
+    }
   }
 
   useEffect(() => {
     getNews();
   }, []);
+
   return (
-    <div className="whatNewSection mt-8 mb-5 pt-5 pb-3">
+    <div className="whatNewSection mt-8 mb-5 pt-5">
       <hr />
-      <div className="title mt-8 text-right mb-8">
-        <h1 className="text-6xl mr-2 lg:mr-10 pb-3 md:text-6xl">
+      <div className="title mt-4 text-right mb-8">
+        <h1 className="text-5xl mr-4 lg:mr-28 pb-3 font-semibold md:text-6xl">
           what's brewing around you.
         </h1>
         <hr />
       </div>
-      <div className="feedBox flex-col lg:flex-row lg:mr-10 lg:ml-10">
+      <div className="feedBox flex-col lg:flex-row lg:mr-28 lg:ml-28">
         <BreakingN article={article} />
         <hr className="lg:hidden" />
         <Articles />

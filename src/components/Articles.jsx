@@ -41,20 +41,20 @@ function Articles() {
 
   return (
     <div className="mt-5 lg:mt-1 mb-5">
-      <div className="articles m-5">
-        <h3 className="text-3xl lg:text-4xl font-bold">Latest Articles</h3>
+      <div className="articles ml-5 lg:mr-0">
+        <h3 className="text-3xl lg:text-4xl font-medium">Latest Articles</h3>
         {isLoading && <p>Loading articles...</p>}
         {error && <p className="error">{error}</p>}
         <div className="list-arts rounded-md flex-col">
           {news.map((item) => (
             <Link to={`/article/${item._id}`} key={item._id}>
-              <div className="arts lg:p-2 justify-between rounded-md shadow-md flex">
+              <div className="arts lg:p-2 justify-between rounded-md hover:shadow-lg shadow-md flex">
                 <div className="lg:w-[520px] self-center">
                   <p className="font-medium pb-1">{item.title || "Title"}</p>
                   <p className="text-sm">By {item.author}</p>
                 </div>
                 <img
-                  className="h-29 max-h-32 w-32 rounded-md"
+                  className="h-29 max-h-fit w-32 rounded-md"
                   src={item.urlToImage || artImg} // Fallback image
                   alt="articleImage"
                 />

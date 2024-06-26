@@ -5,13 +5,13 @@ function Genre() {
   return (
     <div className="mb-10">
       <div className="genre-box">
-        <div className="title mt-8 text-right mb-8">
-          <h1 className="text-6xl mr-2 lg:mr-10 pb-3 md:text-6xl">
-            want something specific?
+        <div className="title mt-4 max-md:mt-1 text-right mb-8">
+          <h1 className="text-5xl mr-4 lg:mr-28 pb-3 font-semibold md:text-6xl">
+            something specific.
           </h1>
           <hr />
         </div>
-        <div className="genre-list mt-10 mb-10 mr-2 ml-2 lg:ml-10 lg:mr-10">
+        <div className="genre-list mt-10 mb-10 mr-2 ml-2 lg:ml-28 lg:mr-28">
           <Link
             className="gen rounded-md shadow-sm lg:w-[30%]"
             to={`/category/general`}

@@ -21,15 +21,17 @@ function Cards() {
   }, []);
 
   return (
-    <div className="m-2 lg:m-9">
-      <h1 className="text-3xl ml-4 md:text-4xl">Latest News</h1>
-      <div className="cards overflow-auto hover:overflow-x-scroll">
+    <div className="m-2 lg:ml-28 lg:mr-28">
+      <h1 className="text-3xl ml-4 lg:ml-0 font-medium md:text-4xl">
+        Today's Headlines
+      </h1>
+      <div className="cards mr-4 ml-4 lg:mr-0 lg:ml-0 rounded-md overflow-auto hover:overflow-x-scroll">
         {news.map((item) => (
           <Link className="mr-2" to={`/article/${item._id}`} key={item._id}>
             <div className="showcase mb-4 relative">
               <div className="heroImage shadow-md rounded-md w-[84vw] md:w-[60vw] lg:w-[30vw] brightness-50">
                 <img
-                  className="card-image rounded-sm"
+                  className="card-image rounded-md"
                   src={item.urlToImage || img}
                   alt={item.title}
                 />

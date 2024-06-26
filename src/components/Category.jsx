@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import img from "../assets/articleImage.png";
 import "./page.css";
+import Footer from "./Footer";
 
 function Category() {
   const { categoryName } = useParams();
@@ -27,12 +28,12 @@ function Category() {
     <div>
       <Navbar />
       <div className="title text-right mt-5 mb-5">
-        <h1 className="text-6xl mr-2 lg:mr-10 pb-3 md:text-8xl">
+        <h1 className="text-6xl mr-2 lg:mr-28 pb-3 md:text-8xl">
           {categoryName}
         </h1>
         <hr />
       </div>
-      <div className="art-list max-md:flex-col lg:flex-wrap lg:justify-evenly m-4">
+      <div className="art-list lg:mr-28 lg:ml-28 max-md:flex-col lg:flex-wrap lg:justify-evenly m-4">
         {news.map((item) => (
           <Link className="" to={`/article/${item._id}`} key={item._id}>
             <div className="showcase flex-row-reverse h-28 lg:flex-col lg:h-72 lg:m-3 lg:w-60 shadow-md rounded-md pl-2 lg:pl-0 overflow-hidden justify-between lg:justify-start mb-4 ">
@@ -50,6 +51,7 @@ function Category() {
           </Link>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

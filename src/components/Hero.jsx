@@ -8,8 +8,6 @@ import { Link } from "react-router-dom";
 
 function Hero() {
   const [articles, setArticles] = useState([]);
-  const [isLoading, setIsLoading] = useState(false); // Track loading state
-  const [error, setError] = useState(null);
 
   function getRandomInt(min, max) {
     min = Math.ceil(min); // Ensure minimum is an integer
@@ -23,17 +21,12 @@ function Hero() {
   // const url = "http://localhost:3000/list/20";
 
   async function getNews() {
-    setIsLoading(true); // Set loading state to true
-    setError(null); // Clear any previous errors
     try {
       const response = await axios.get(url);
 
       setArticles(response.data[randomInt]);
     } catch (error) {
       console.error("Error fetching news:", error);
-      setError("Failed to load articles. Please try again later."); // User-friendly error message
-    } finally {
-      setIsLoading(false); // Set loading state to false after fetching or error
     }
   }
 
@@ -44,22 +37,28 @@ function Hero() {
   return (
     <div className="hero mt-5">
       <div className="title text-right mb-5">
-        <h1 className="text-6xl mr-2 lg:mr-10 pb-3 md:text-8xl">JOURNAL</h1>
+        <h1 className="text-5xl mr-4 lg:mr-28 pb-3 md:text-8xl ">JOURNAL</h1>
         <hr />
       </div>
+      <h1 className="text-3xl ml-6 lg:ml-28 font-medium md:text-4xl">
+        Breaking News
+      </h1>
       <Link to={`/article/${articles._id}`}>
-        <div className="main-hero m-6 overflow-hidden shadow-md rounded-md lg:m-10 flex-col lg:flex-row">
+        <div className="main-hero ml-6 mr-6 mt-3 mb-6 overflow-hidden shadow-md hover:shadow-lg rounded-md lg:ml-28 lg:mr-28 lg:mt-3 flex-col lg:flex-row">
           <div className="mainImage lg:w-[95%]">
             <img
               src={articles.urlToImage || img}
-              className=""
+              className="hero-image lg:max-h-96 lg:w-full"
               alt={articles.title}
             />
           </div>
-          <div className="content pl-2 pb-2 lg:pl-5 lg:w-[100%]">
-            {isLoading && <p>Loading article...</p>}
-            {error && <p className="error">{error}</p>}
-            <h1 className="text-2xl lg:text-3xl mt-4">{articles.title}</h1>
+          <div className="content pl-2 pb-2 pr-2 lg:pl-5 lg:w-[100%]">
+            <h1 className="text-2xl lg:text-3xl font-medium mt-4">
+              {articles.title}
+            </h1>
+            <p className="text-xl lg:text-sm mt-2 mb-2">
+              {articles.description}
+            </p>
             <GetDateTime dateTimeString={articles.publishedAt} />
           </div>
         </div>

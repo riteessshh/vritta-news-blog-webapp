@@ -3,10 +3,15 @@
 .navbar {
   color: #153448;
   font-family: "Merriweather", serif;
-  margin: 5px 15px 0 15px;
+}
+.menu-card {
+  display: flex;
+  justify-content: center;
 }
 .items {
   cursor: pointer;
+  display: inline-block;
+  margin: 10px;
 }
 
 h1,
@@ -16,7 +21,6 @@ h4,
 h5 {
   font-family: "Merriweather", serif;
   color: #153448;
-  cursor: default;
 }
 p {
   font-family: "Montserrat", sans-serif;
@@ -29,17 +33,21 @@ hr {
   width: 100%;
   position: relative;
 }
+.title {
+  cursor: default;
+}
 
 .main-hero {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  /* border: 1px solid #6d8095; */
 }
 
 .cards {
   display: flex;
   flex-direction: row;
-  margin: 10px 15px 0 15px;
+  margin-top: 10px;
 }
 .card-image {
   height: 300px;
@@ -56,7 +64,7 @@ hr {
 .arts {
   margin: 20px 0;
   padding: 2px 1px 2px 5px;
-  border: 2px solid #415a77;
+  /* border: 1px solid #6d8095; */
 }
 
 .genre-list {
@@ -68,7 +76,7 @@ hr {
 .gen {
   width: 47%;
   background-color: #153448;
-  color: white;
+  color: #e5e7eb;
   margin: 5px;
   height: 12vh;
   align-content: center;
@@ -89,7 +97,7 @@ footer {
 }
 .logo {
   width: 30%;
-  font-family: "Lustria", serif;
+  font-family: "Merriweather", sans-serif;
   margin: 10px 0;
   cursor: pointer;
 }
@@ -100,16 +108,19 @@ footer {
 }
 .tab {
   margin: 10px 0;
-  padding: 0 10px;
-  color: antiquewhite;
-  font-family: "Raleway", serif;
+  padding: 0 25px;
+  color: #e5e7eb;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   cursor: pointer;
 }
+.tab:last-child {
+  padding-right: 0;
+}
 
 .cred {
-  padding: 10px 0;
-  color: antiquewhite;
-  font-family: "Raleway", serif;
+  padding: 5px 0;
+  color: #4c618c;
+  font-family: "Montserrat", sans-serif;
   cursor: default;
 }

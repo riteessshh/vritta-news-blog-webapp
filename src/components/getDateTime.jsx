@@ -17,13 +17,15 @@ function GetDateTime({ dateTimeString }) {
     hour12: true, // Use 12-hour format (optional)
   });
 
-  return (
-    <div>
-      <p>
-        Dated on: {formattedDate} {formattedTime}
-      </p>
-    </div>
-  );
+  if (dateTimeString) {
+    return (
+      <div>
+        <p>
+          Dated on: {formattedDate} {formattedTime}
+        </p>
+      </div>
+    );
+  }
 }
 
 export default GetDateTime;

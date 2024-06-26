@@ -5,12 +5,18 @@ import { Link } from "react-router-dom";
 function BreakingN({ article }) {
   const loadingText = "Loading.....";
   return (
-    <div className="ml-5 mr-5">
+    <div className="ml-5 lg:ml-0 mr-5">
+      <h1 className="text-3xl lg:ml-0 font-medium md:text-4xl">
+        Trending News
+      </h1>
       <Link to={`/article/${article._id}`}>
-        <div className="container rounded-md shadow-md overflow-hidden mb-5 lg:mr-3 mt-5">
-          <img className="" src={article.urlToImage || wnImage} alt="" />
-          <div className="ml-2 mr-2">
-            <h3 className="font-semibold pt-2 pb-1 text-2xl">Breaking News</h3>
+        <div className="container rounded-md max-w-[640px] shadow-md hover:shadow-lg overflow-hidden mb-5 lg:mr-3 mt-3">
+          <img
+            className="w-full h-[360px]"
+            src={article.urlToImage || wnImage}
+            alt=""
+          />
+          <div className="ml-2 mt-2 mr-2">
             <p className="font-semibold text-xl pb-1">
               {article.title || loadingText}
             </p>
