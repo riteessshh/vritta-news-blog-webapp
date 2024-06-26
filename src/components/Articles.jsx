@@ -41,7 +41,7 @@ function Articles() {
 
   return (
     <div className="mt-5 lg:mt-1 mb-5">
-      <div className="articles ml-5 lg:mr-0">
+      <div className="articles ml-5 mr-5 lg:mr-0">
         <h3 className="text-3xl lg:text-4xl font-medium">Latest Articles</h3>
         {isLoading && <p>Loading articles...</p>}
         {error && <p className="error">{error}</p>}
